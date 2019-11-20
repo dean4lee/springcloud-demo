@@ -12,6 +12,7 @@
         <module>eureka-server</module>
         <module>eureka-service</module>
         <module>ribbon-consumer</module>
+        <module>feign-consumer</module>
     </modules>
 
     <!-- springboot版本 -->
