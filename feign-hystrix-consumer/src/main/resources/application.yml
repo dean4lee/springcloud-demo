@@ -1,0 +1,27 @@
+server:
+  port: 8768
+
+spring:
+  application:
+    #服务名称
+    name: feign-hystrix-consumer
+
+eureka:
+  client:
+    #是否将自己注册到Eureka服务中
+    register-with-eureka: true
+    #是否从Eureka服务中获取注册信息
+    fetch-registry: true
+    #Eureka注册中心的地址,多个注册中心用,隔开
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+      #defaultZone: http://peer1:8761/eureka/, http://peer2:8762/eureka/
+
+feign:
+  hystrix:
+    #开启断路器功能
+    enabled: true
+
+logging:
+  level:
+    root: error
