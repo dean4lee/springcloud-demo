@@ -1,0 +1,31 @@
+server:
+  port: 8802
+
+spring:
+  application:
+    #服务名称
+    name: hystrix-dashboard-turbine
+
+eureka:
+  client:
+    #是否将自己注册到Eureka服务中
+    register-with-eureka: true
+    #是否从Eureka服务中获取注册信息
+    fetch-registry: true
+    #Eureka注册中心的地址,多个注册中心用,隔开
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+      #defaultZone: http://peer1:8761/eureka/, http://peer2:8762/eureka/
+
+turbine:
+  #监控的服务名称
+  app-config: hystrix-dashboard, hystrix-dashboard2
+  #集群名称
+  cluster-name-expression: "'default'"
+  #指定聚合哪些集群，默认default
+  aggregator:
+    cluster-config: default
+
+logging:
+  level:
+    root: error
