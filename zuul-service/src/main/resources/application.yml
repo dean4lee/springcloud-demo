@@ -1,0 +1,37 @@
+server:
+  port: 8810
+
+spring:
+  application:
+    #服务名称
+    name: zuul-service
+
+eureka:
+  client:
+    #是否将自己注册到Eureka服务中
+    register-with-eureka: true
+    #是否从Eureka服务中获取注册信息
+    fetch-registry: true
+    #Eureka注册中心的地址,多个注册中心用,隔开
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+      #defaultZone: http://peer1:8761/eureka/, http://peer2:8762/eureka/
+
+zuul:
+  routes:
+    #将/baidu/**的请求转发到https://www.baidu.com
+    baidu:
+      path: /baidu/**
+      url: https://www.baidu.com
+    #将/ribbon/**的请求转发到ribbon-consumer的服务
+    ribbon-api:
+      path: /ribbon/**
+      service-id: ribbon-consumer
+    feign-api:
+      path: /feign/**
+      service-id: feign-consumer
+
+
+logging:
+  level:
+    root: error

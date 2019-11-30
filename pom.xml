@@ -17,6 +17,7 @@
         <module>feign-hystrix-consumer</module>
         <module>hystrix-dashboard</module>
         <module>hystrix-dashboard-turbine</module>
+        <module>zuul-service</module>
     </modules>
 
     <!-- springboot版本 -->
