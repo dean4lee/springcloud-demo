@@ -1,0 +1,11 @@
+server:
+  port: 8880
+
+spring:
+  application:
+    name: config-client
+
+logging:
+  level:
+    root: error
+    demo.cloud: debug

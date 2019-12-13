@@ -1,0 +1,23 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          #git仓库地址
+          uri: https://github.com/dean4lee/springcloud-demo
+          #仓库地址下的路径，多个用,隔开
+          search-paths: conf
+          #用户名
+          username:
+          #密码
+          password:
+
+logging:
+  level:
+    root: error
+    demo.cloud: debug

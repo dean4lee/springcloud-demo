@@ -18,6 +18,8 @@
         <module>hystrix-dashboard</module>
         <module>hystrix-dashboard-turbine</module>
         <module>zuul-service</module>
+        <module>config-server</module>
+        <module>config-client</module>
     </modules>
 
     <!-- springboot版本 -->
