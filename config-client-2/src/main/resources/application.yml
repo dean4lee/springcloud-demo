@@ -1,0 +1,21 @@
+server:
+  port: 8880
+
+spring:
+  application:
+    name: config-client
+
+eureka:
+  client:
+    #是否将自己注册到Eureka服务中
+    register-with-eureka: true
+    #是否从Eureka服务中获取注册信息
+    fetch-registry: true
+    #Eureka注册中心的地址,多个注册中心用,隔开
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+logging:
+  level:
+    root: error
+    demo.cloud: debug
