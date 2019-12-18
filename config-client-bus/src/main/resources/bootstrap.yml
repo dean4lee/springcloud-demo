@@ -1,0 +1,19 @@
+spring:
+  cloud:
+    config:
+      #配置服务器地址
+      #uri: http://localhost:8888
+      #对应{application}
+      name: hello
+      #对应{profile}
+      profile: dev
+      #git分支
+      label: master
+      #如果有密码验证
+      username:
+      password:
+      discovery:
+        #开启config配置中心发现
+        enabled: true
+        #config配置中心的service-id，即服务名
+        service-id: config-server

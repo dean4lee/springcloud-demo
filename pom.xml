@@ -22,6 +22,7 @@
         <module>config-client</module>
         <module>config-server-2</module>
         <module>config-client-2</module>
+        <module>config-client-bus</module>
     </modules>
 
     <!-- springboot版本 -->
