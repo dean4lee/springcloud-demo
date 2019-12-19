@@ -23,6 +23,8 @@
         <module>config-server-2</module>
         <module>config-client-2</module>
         <module>config-client-bus</module>
+        <module>sleuth-service</module>
+        <module>sleuth-consumer</module>
     </modules>
 
     <!-- springboot版本 -->

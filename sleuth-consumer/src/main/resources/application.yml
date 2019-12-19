@@ -1,0 +1,24 @@
+server:
+  port: 8764
+
+spring:
+  application:
+    #服务名称，相同名称不同端口的项目可实现集群
+    name: sleuth-consumer
+  zipkin:
+    base-url: http://localhost:9411/
+
+eureka:
+  client:
+    #是否将自己注册到Eureka服务中
+    register-with-eureka: true
+    #是否从Eureka服务中获取注册信息
+    fetch-registry: true
+    #Eureka注册中心的地址,多个注册中心用,隔开
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+      #defaultZone: http://peer1:8761/eureka/, http://peer2:8762/eureka/
+
+logging:
+  level:
+    root: error
